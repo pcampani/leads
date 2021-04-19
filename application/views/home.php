@@ -1,6 +1,6 @@
 <?php $this->load->view("layout/header") ?>
 <div class="search-results">
-	<div class="page-links"><?php echo $this->pagination->create_links(); ?></div>
+	<div class="links"><?php echo $this->pagination->create_links(); ?></div>
 		<table>
 			<thead>
 				<tr>

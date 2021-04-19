@@ -14,13 +14,15 @@
 	<div class="wrapper">
 		<header>
 			<h2>Leads and Clients</h2>
+			<div class="form-box">
+				<div>
+					<label for="name">Name</label>
+					<input type="text" name="search" id="search">
+				</div>
+				<form action="">
+					<input type="date" name="from">
+					<input type="date" name="to">
+				</form>
+			</div>
 		</header>
 		
-			<label for="name">Name</label>
-			<input type="text" name="search" id="search">
-		
-		
-		<form action="">
-			<input type="date" name="from">
-			<input type="date" name="to">
-		</form>

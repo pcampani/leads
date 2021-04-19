@@ -7,7 +7,61 @@
 body {
 	font-family: Arial, Helvetica, sans-serif;
 }
-	th {
-		text-align: left;
+	header {
+		padding: 1em;
+		background-color: #1e90ff;
+		color: #fff;
+		position: relative;
 	}
+		h2, .form-box, .form-box div, .form-box form {
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.form-box {
+			position: absolute;
+			top: 1em;
+			right: 1em;
+		}
+			input {
+				border: none;
+				height: 2em;
+				padding: .5em;
+				border-radius: 5px;
+			}
+		.search-results {
+			padding: 2em;
+			width: 800px;
+			margin: 0 auto;
+		}
+		table {
+			margin-top: 2em;
+			border-collapse: collapse;
+			width: 100%
+		}
+			th {
+				background-color: #9EC5FE;
+				text-align: left;
+				padding: .5em;
+			}
+			tr:nth-child(even) {
+				background-color: #9EC5FE;
+			}
+				td {
+					padding: .5em;
+				}
+			div.links a, div strong {
+				display: inline-block;
+				vertical-align: top;
+				background-color: #1e90ff;
+				text-decoration: none;
+				text-align: center;
+				height: 35px;
+				width: 35px;
+				padding: .5em;
+				color: #fff;
+				margin: .1em;
+				border-radius: 5px;
+			}
+
+
 	

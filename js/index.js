@@ -12,8 +12,15 @@ $(document).ready(function(){
 		if(searchTerm) {
 			$.post("/leads/search", {search:searchTerm}, function(data){
 				$(".search-results").html(data);
+			});
+		}
+		else {
+			$.get("/leads/index", function(data){
+				$("body").html(data);
 			})
 		}
 	}));
+
+	
 		
 })

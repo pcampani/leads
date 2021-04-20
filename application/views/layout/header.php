@@ -19,9 +19,9 @@
 					<label for="name">Name</label>
 					<input type="text" name="search" id="search">
 				</div>
-				<form action="">
-					<input type="date" name="from">
-					<input type="date" name="to">
+				<form id="myForm" action="/leads/process_date" method="post">
+					<input type="date" name="from" id="from_date">
+					<input type="date" name="to" id="to_date">
 				</form>
 			</div>
 		</header>

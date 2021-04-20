@@ -27,10 +27,24 @@ class Leads extends CI_Controller {
 		$this->load->view("partials/lead", $data);
 	}
 
-	public function search() {
+	public function search_index($offset) {
+		$search_term = $this->input->post("search");
+		$result = $this->lead->search_leads($search_term,$offset,5);
+		$this->load->view("partials/search", $result);
+	}
+
+	public function search($offset=0) {
 		$search_term = $this->security->xss_clean($this->input->post("search"));
-		$result = $this->lead->search_leads($search_term);
-		$this->pagination($result["count"],"search");
+		$result = $this->lead->search_leads($search_term,$offset,5);
+		$this->pagination($this->lead->search_count($search_term),"search");
+		$this->load->view("partials/search", $result);
+	}
+
+	/*This function takes in the date and returns all records within the specified date. Owner:Philip */
+	public function process_date() {
+		$from = $this->security->xss_clean($this->input->post("from"));
+		$to = $this->security->xss_clean($this->input->post("to"));
+		$result = $this->lead->search_by_date($from,$to);
 		$this->load->view("partials/search", $result);
 	}
 
